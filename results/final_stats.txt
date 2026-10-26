@@ -1,0 +1,34 @@
+== success (/100) and median T of successful episodes
+SFT success 79 median T 134
+S10 success 81 median T 136
+S20 success 89 median T 140
+S40 success 85 median T 147
+T20 success 90 median T 130
+T40 success 81 median T 126
+
+== paired comparisons (B - A on initial states both solved)
+S40->T40 common 77 faster/slower/same 71/4/2 median diff -22 p 6.8e-17 | medians 147 -> 126 | success only-S40 8 only-T40 4 p 0.39
+SFT->S10 common 74 faster/slower/same 22/36/16 median diff +0 p 0.087 | medians 131.5 -> 136 | success only-SFT 5 only-S10 7 p 0.77
+SFT->S20 common 76 faster/slower/same 15/54/7 median diff +3 p 2.6e-06 | medians 132.5 -> 139 | success only-SFT 3 only-S20 13 p 0.021
+SFT->S40 common 70 faster/slower/same 9/59/2 median diff +9.5 p 3.9e-10 | medians 132.5 -> 147 | success only-SFT 9 only-S40 15 p 0.31
+SFT->T20 common 75 faster/slower/same 48/20/7 median diff -2 p 0.00091 | medians 133 -> 131 | success only-SFT 4 only-T20 15 p 0.019
+SFT->T40 common 68 faster/slower/same 56/8/4 median diff -12 p 5.6e-10 | medians 131.5 -> 121.5 | success only-SFT 11 only-T40 13 p 0.84
+T20->T40 common 78 faster/slower/same 59/17/2 median diff -7 p 1.4e-06 | medians 128 -> 126.5 | success only-T20 12 only-T40 3 p 0.035
+
+== per task: success SFT/S40/T40 (/10) | median T on initial states both solved
+task 0 success 5/8/9 | SFT->S40 n4 147.5->148.5 (+1) | SFT->T40 n4 147.5->137 (-10.5) | S40->T40 n8 149->136 (-13) | pick up the alphabet soup and place it in the basket
+task 1 success 8/10/8 | SFT->S40 n8 125->134 (+9) | SFT->T40 n8 125->113.5 (-11.5) | S40->T40 n8 134->113.5 (-20.5) | pick up the cream cheese and place it in the basket
+task 2 success 10/9/10 | SFT->S40 n9 117->135 (+18) | SFT->T40 n10 116.5->107 (-9.5) | S40->T40 n9 135->107 (-28) | pick up the salad dressing and place it in the basket
+task 3 success 9/10/7 | SFT->S40 n9 126->138 (+12) | SFT->T40 n6 126.5->122.5 (-4) | S40->T40 n7 132->118 (-14) | pick up the bbq sauce and place it in the basket
+task 4 success 7/5/6 | SFT->S40 n4 146->155.5 (+9.5) | SFT->T40 n5 146->131 (-15) | S40->T40 n5 161->127 (-34) | pick up the ketchup and place it in the basket
+task 5 success 8/6/7 | SFT->S40 n5 128->134 (+6) | SFT->T40 n6 128->117.5 (-10.5) | S40->T40 n6 133.5->118 (-15.5) | pick up the tomato sauce and place it in the basket
+task 6 success 9/10/10 | SFT->S40 n9 145->149 (+4) | SFT->T40 n9 145->129 (-16) | S40->T40 n10 152.5->129 (-23.5) | pick up the butter and place it in the basket
+task 7 success 5/8/6 | SFT->S40 n5 135->144 (+9) | SFT->T40 n3 134->115 (-19) | S40->T40 n6 147->117 (-30) | pick up the milk and place it in the basket
+task 8 success 10/10/10 | SFT->S40 n10 154.5->153 (-1.5) | SFT->T40 n10 154.5->132.5 (-22) | S40->T40 n10 153->132.5 (-20.5) | pick up the chocolate pudding and place it in the basket
+task 9 success 8/9/8 | SFT->S40 n7 120->130 (+10) | SFT->T40 n7 120->110 (-10) | S40->T40 n8 133.5->114 (-19.5) | pick up the orange juice and place it in the basket
+
+== groups used for training per batch (4 groups of 8 trajectories; a group is used when its rewards differ)
+S used 82 / 160 series 2310423313341112332232122312222121331131
+S all-success groups 78 series 2134021131103332112212322132222323113313
+T used 160 / 160 series 4444444444444444444444444444444444444444
+T all-success groups 69 series 2124032112301222312321311123213312211200
