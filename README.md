@@ -86,4 +86,4 @@ Python 3.9 以降の標準ライブラリだけで動きます。
 
 ## ライセンス
 
-MIT License（`LICENSE`）
+本リポジトリのコードは MIT License（`LICENSE`）です。ただし、`patches/patch_time_reward.py` に含まれる [ART-Embodied](https://github.com/wandb/ART-Embodied) のソースの断片（置き換え元の文字列）は ART-Embodied のもので、[Apache License 2.0](https://github.com/wandb/ART-Embodied/blob/main/LICENSE) に従います。ART-Embodied 本体は同梱しておらず、実行時に公式リポジトリから取得します。
